@@ -7,6 +7,7 @@ const NavBar = ({
   setLocale,
   errorsProbability,
   setErrorsProbability,
+  handleCSVExport,
 }) => {
   const handleSeedChange = (e) => {
     setSeed(Number(e.target.value));
@@ -29,6 +30,9 @@ const NavBar = ({
       <Container>
         <Navbar.Brand>Task 5</Navbar.Brand>
         <Nav className="d-flex justify-content-between align-items-center">
+          <Nav.Item className="me-3">
+            <Button onClick={handleCSVExport}>Export CSV</Button>
+          </Nav.Item>
           <Nav.Item className="me-3">
             <Form.Select
               aria-label="Default select example"
